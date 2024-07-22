@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="car-form">
+    <h2>{{ form.instance.pk|yesno:"Update Car,Add New Car" }}</h2>
+    
+    <form method="post" action="{% url 'car_create' %}" class="form-container">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="form-actions">
+            <button type="submit" class="btn btn-submit">Save</button>
+            <a href="{% url 'car_list' %}" class="btn btn-cancel">Cancel</a>
+        </div>
+    </form>
+</section>
+{% endblock content %}

@@ -1,0 +1,501 @@
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* style/style.css */
+
+/* Reset some default styles */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    padding-left: 30px;
+    color: #333;
+}
+nav{
+    background-color: #333;
+}
+nav ul {
+    list-style: none;
+    padding: 0 0 0 35px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 0.5rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+/* style/style.css */
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hero Section */
+.hero-content {
+    background-color: #3498db; /* Changed background color for visibility */
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content .btn {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero-content .btn:hover {
+    background-color: #c0392b;
+}
+
+/* Inventory Section */
+.inventory-section {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.inventory-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.brand-images, .top-sales-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.brand-images img, .top-sales-images img {
+    width: calc(33.333% - 1rem); /* 3 images per row with gap included */
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.brand-images img:hover, .top-sales-images img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .brand-images img, .top-sales-images img {
+        width: calc(50% - 0.5rem); /* 2 images per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-images img, .top-sales-images img {
+        width: calc(100% - 1rem); /* 1 image per row on extra small screens */
+    }
+}
+
+
+/* style/style.css */
+
+/* Car List Section */
+.car-list {
+    padding: 2rem 1rem;
+    background-color: #f4f4f4;
+}
+
+.car-list h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Add Car Button */
+.add-car-btn {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.add-car-btn .btn-add {
+    background-color: #2ecc71; /* Green background */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.add-car-btn .btn-add:hover {
+    background-color: #27ae60; /* Darker green on hover */
+}
+
+/* Car Cards */
+.car-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.car-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    width: calc(33.333% - 1rem); /* 3 cards per row with gap included */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: scale(1.05);
+}
+
+.car-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.car-card p {
+    margin-bottom: 0.5rem;
+}
+
+.btn-details {
+    background-color: #3498db; /* Blue background */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-details:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+@media (max-width: 768px) {
+    .car-card {
+        width: calc(50% - 0.5rem); /* 2 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .car-card {
+        width: calc(100% - 1rem); /* 1 card per row on extra small screens */
+    }
+}
+
+/* style/style.css */
+
+/* Car Form Section */
+.car-form {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.car-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container p {
+    margin-bottom: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.btn-submit {
+    background-color: #2ecc71; /* Green background */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #27ae60; /* Darker green on hover */
+}
+
+.btn-cancel {
+    background-color: #e74c3c; /* Red background */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cancel:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+}
+/* style/style.css */
+
+/* Car Detail Section */
+.car-detail {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.car-detail h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.car-info {
+    margin-bottom: 2rem;
+}
+
+.car-info h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.car-info p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.car-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-update, .btn-delete {
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-update {
+    background-color: #3498db; /* Blue background */
+}
+
+
+
+.btn-delete {
+    background-color: #e74c3c; /* Red background */
+}
+
+.btn-delete:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+/* style/style.css */
+
+/* Car Update Section */
+.car-update {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.car-update h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form p {
+    margin-bottom: 1rem;
+}
+
+
+
+.btn-update:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+}
+/* style/style.css */
+
+/* Car Delete Confirmation Section */
+.car-delete-confirm {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.car-delete-confirm h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.car-delete-confirm p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.car-delete-confirm form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
