@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="car-detail">
+    <h2>Car Details</h2>
+    <div class="car-info">
+        <h3>{{ car.model }}</h3>
+        <p><strong>Brand:</strong> {{ car.brand }}</p>
+        <p><strong>Price:</strong> ${{ car.price }}</p>
+        <p><strong>Status:</strong> {% if car.is_bought %} Bought {% else %} Available {% endif %}</p>
+        <p><strong>Buy Time:</strong> {{ car.buy_time }}</p>
+    </div>
+    <div class="car-actions">
+        <a href="{% url 'car_update' car.id %}" class="btn-update">Update</a>
+        <a href="{% url 'car_delete' car.id %}" class="btn-delete">Delete</a>
+    </div>
+</section>
+{% endblock content %}
