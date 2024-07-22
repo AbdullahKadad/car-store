@@ -8,7 +8,7 @@ class Car(models.Model):
     brand = models.CharField(max_length=255, blank=False, null=False)
     price = models.FloatField(blank=False, null=False, default=0.0)
     is_bought = models.BooleanField(default=False)
-    buy_time = models.DateField()
+    buy_time = models.DateField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.model} by {self.brand} at ${self.price}"
